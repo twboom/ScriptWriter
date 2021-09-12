@@ -15,3 +15,10 @@ session.getCurrentLineIndex = _ => {
 
 // Last active line
 session.lastActiveLine = null;
+
+// Object to store script data
+const script = {};
+script.title = null;
+script.description = null;
+script.author = null;
+script.version = null;
