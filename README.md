@@ -14,6 +14,9 @@ These are the types of lines that can be written in the script. All of them are 
 * `LOCATION`: Location where something happens
 * `CUT`: Camera cut
 
+## Sample script
+I've included a sample script in this repository. It is written by the Wikipedia user [Mendaliv](https://en.wikipedia.org/wiki/User:Mendaliv). It is not meant to be build upon, but rather to learn all the available shortcuts and tricks. (And for me testing.)
+
 ## Used references
 These are the references that I used:
-* [Styling Reference](https://en.wikipedia.org/wiki/Screenplay#/media/File:Screenplay_example.svg)
+* [Styling Reference & Sample script](https://en.wikipedia.org/wiki/Screenplay#/media/File:Screenplay_example.svg)
