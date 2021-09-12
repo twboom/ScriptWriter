@@ -6,6 +6,6 @@ session.lines = [];
 session.elements = [];
 
 // Get current line index
-session.getCurrentLine = _ => {
-    return document.activeElement.dataset.line;
+session.getCurrentLineIndex = _ => {
+    return parseInt(document.activeElement.dataset.line);
 }
