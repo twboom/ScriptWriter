@@ -79,6 +79,7 @@ const hotkeys = [
 function initHotkeys(hotkeys) {
     hotkeys.forEach(hotkey => {
         document.addEventListener('keydown', evt => {
+            if (!evt.target.classList.contains('line')) { return }
             if (
                 evt.key === hotkey.key &&
                 evt.altKey === hotkey.altKey &&
