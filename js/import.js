@@ -89,8 +89,10 @@ function readFile(file) {
     const meta = readMeta(file[0]);
     const lines = readScript(file[1]);
 
-    script = meta;
-    session.lines = lines;
+    updateTitle(meta.title, true);
+    updateAuthor(meta.author, true);
+    updateDescription(meta.description);
+    updateVersion(meta.version);
 
     lines.forEach(({content, type}) => {
         createLine(content, type, 'LAST');
