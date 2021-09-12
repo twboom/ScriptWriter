@@ -17,7 +17,7 @@ session.getCurrentLineIndex = _ => {
 session.lastActiveLine = null;
 
 // Object to store script data
-const script = {};
+let script = {};
 script.title = null;
 script.description = null;
 script.author = null;
