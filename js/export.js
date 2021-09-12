@@ -50,4 +50,6 @@ function generateFile() {
     data += text;
 
     const encoded = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
+
+    return encoded
 }
