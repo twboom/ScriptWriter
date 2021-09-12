@@ -4,6 +4,7 @@ function createLine(content, type, index) {
     line.classList.add('line');
     line.classList.add(type);
     line.innerText = content;
+    line.setAttribute('contenteditable', 'true');
 
     const obj = {
         content: content,
@@ -11,6 +12,7 @@ function createLine(content, type, index) {
     };
 
     if (index === 'LAST') {
+        index = session.lines.length;
         session.elements.push(line);
         session.lines.push(obj);
     } else {
@@ -18,11 +20,16 @@ function createLine(content, type, index) {
         session.lines.splice(index, 0, obj);
     };
 
+    line.addEventListener('input', _ => {
+        editLine(line.innerText, index);
+    });
+
     return line
 };
 
 // Edit an already existing line
 function editLine(newContent, index) {
+    console.log(newContent, index);
     session.elements[index].innerText = newContent;
     session.lines[index].content = newContent;
 };
