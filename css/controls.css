@@ -39,3 +39,27 @@ button:hover {
 button:active {
     font-size: 12px;
 }
+
+div.control-section#meta {
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+p#info {
+    color: white;
+    font-weight: bolder;
+}
+
+img#more-info {
+    height: 24px;
+
+    filter: invert(100%);
+}
+
+img#more-info:hover {
+    transform: scale(1.05);
+}
+
+img#more-info:active {
+    transform: scale(0.95);
+}
