@@ -1,3 +1,7 @@
+/* 
+Editing script itself
+*/
+
 // Create a new line
 function createLine(content, type, index, doFocus) {
     const line = document.createElement('p');
@@ -67,4 +71,34 @@ function updateIndexes() {
     for (let i = 0; i < session.elements.length; i++) {
         session.elements[i].dataset.line = i;
     }
+}
+
+/*
+Editing META data
+*/
+
+// Update the title
+function updateTitle(newTitle, doEditHTML) {
+    script.title = newTitle;
+    if (doEditHTML) {
+        document.getElementById('title').innerText = newTitle;
+    };
+}
+
+// Update the author
+function updateAuthor(newAuthor, doEditHTML) {
+    script.author = newAuthor;
+    if (doEditHTML) {
+        document.getElementById('author').innerText = newAuthor;
+    };
+}
+
+// Update the description
+function updateDescription(newDescription) {
+    script.description = newDescription;
+}
+
+// Update the version
+function updateVersion(newVersion) {
+    script.version = newVersion;
 }
