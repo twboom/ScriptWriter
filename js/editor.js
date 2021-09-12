@@ -1,5 +1,6 @@
 // Create a new line
 function createLine(content, type, index, doFocus) {
+    console.log(arguments)
     const line = document.createElement('p');
     line.classList.add('line');
     line.classList.add(type);
@@ -28,6 +29,8 @@ function createLine(content, type, index, doFocus) {
         line.focus();
     }
 
+    renderLine(line, index);
+
     return line
 };
 
@@ -48,6 +51,8 @@ function changeLineType(newType, index) {
 
 // Remove a line
 function deleteLine(index) {
+    console.log(index)
+    session.elements[index].remove();
     session.elements.splice(index, 1);
     session.lines.splice(index, 1);
 };

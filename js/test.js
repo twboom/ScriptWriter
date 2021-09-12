@@ -22,4 +22,4 @@ createLine("Oh, just thought I'd bring back your revolver. Thanks for letting me
 createLine("Mike reaches in his pocket and fishes out a hamerless Smith & Wesson. He opens the cylinder with a CLICK and confirms it's unloaded before setting it on the table", "ACTION", "LAST")
 createLine("John removes the paper towel from his plate, setting the back down on it. Then he takes his sunny-side up eggs from the frying pan and puts them on the plate. He sits downbetween Mike and Mary.", "ACTION", "LAST")
 
-render()
+// render()

@@ -30,6 +30,10 @@ p.line:focus {
     background-color: #f0f0f0;
 }
 
+p.line:empty {
+    background-color: #f0f0f0;
+}
+
 p.line.NAME {
     margin-top: 8px;
     text-align: center;
