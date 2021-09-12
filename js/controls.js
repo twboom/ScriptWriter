@@ -41,15 +41,19 @@ function initControls() {
         btn.addEventListener('click', _ => {
             session.lastActiveLine.focus()
         })
-    })
+    });
 
     document.getElementById('title').addEventListener('input', evt => {
         updateTitle(evt.target.innerText, false)
-    })
+    });
 
     document.getElementById('author').addEventListener('input', evt => {
         updateAuthor(evt.target.innerText, false)
-    })
+    });
+
+    document.getElementById('more-info').addEventListener('click', _ => {
+        infoModal()
+    });
 };
 
 initControls();

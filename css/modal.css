@@ -1,0 +1,55 @@
+div#modal-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    width: 100%;
+    height: 100%;
+
+    background: #00000069;
+}
+
+div#modal {
+    margin: 10% auto;
+
+    width: 40%;
+
+    background-color: antiquewhite;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+div#modal-footer {
+    text-align: center;
+}
+
+button#close-button {
+    font-size: 20px;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+button#close-button:hover {
+    transform: scale(1.1);
+}
+
+p.modal-input-text {
+    font-weight: bolder;
+}
+
+input.modal-input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+
+    width: 100%;
+
+    font-family: 'Cutive Mono';
+    font-size: 16px;
+}

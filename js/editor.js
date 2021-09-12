@@ -102,3 +102,100 @@ function updateDescription(newDescription) {
 function updateVersion(newVersion) {
     script.version = newVersion;
 }
+
+function infoModal() {
+    // Fullscreen modal container
+    const container = document.createElement('div');
+    container.id = 'modal-container';
+
+    // Modal box
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    container.appendChild(modal);
+
+    // Modal header
+    const header = document.createElement('h1');
+    header.innerText = 'Script Info';
+    modal.appendChild(header);
+
+    // Modal body
+    const body = document.createElement('div');
+    body.id = 'modal-body';
+    modal.appendChild(body);
+
+    // Inputs
+    const title = document.createElement('p');
+    title.classList.add('modal-input-text');
+    title.innerText = 'Title:';
+    body.appendChild(title);
+
+    const titleInput = document.createElement('input');
+    titleInput.classList.add('modal-input');
+    titleInput.id = 'title-input';
+    titleInput.value = script.title;
+    titleInput.addEventListener('input', _ => {
+        updateTitle(titleInput.value, true);
+    });
+    title.appendChild(titleInput);
+    
+    const author = document.createElement('p');
+    author.classList.add('modal-input-text');
+    author.innerText = 'Author:';
+    body.appendChild(author);
+
+    const authorInput = document.createElement('input');
+    authorInput.classList.add('modal-input');
+    authorInput.id = 'author-input';
+    authorInput.value = script.author;
+    authorInput.addEventListener('input', _ => {
+        updateAuthor(authorInput.value, true);
+    });
+    author.appendChild(authorInput);
+
+    const description = document.createElement('p');
+    description.classList.add('modal-input-text');
+    description.innerText = 'Description:';
+    body.appendChild(description);
+
+    const descriptionInput = document.createElement('input');
+    descriptionInput.classList.add('modal-input');
+    descriptionInput.id = 'author-input';
+    descriptionInput.value = script.description;
+    descriptionInput.addEventListener('input', _ => {
+        updateDescription(descriptionInput.value);
+    });
+    description.appendChild(descriptionInput);
+
+    const version = document.createElement('p');
+    version.classList.add('modal-input-text');
+    version.innerText = 'Version:';
+    body.appendChild(version);
+
+    const versionInput = document.createElement('input');
+    versionInput.classList.add('modal-input');
+    versionInput.id = 'version-input';
+    versionInput.value = script.version;
+    versionInput.addEventListener('input', _ => {
+        updateVersion(versionInput.value);
+    });
+    version.appendChild(versionInput);
+
+    // Modal footer
+    const footer = document.createElement('div');
+    footer.id = 'modal-footer';
+    modal.appendChild(footer);
+
+    // Close button
+    const close = document.createElement('button');
+    close.id = 'close-button';
+    close.innerText = 'Close';
+    close.addEventListener('click', _ => {
+        document.getElementById('modal-container').remove();
+        document.body.style.overflow = 'auto';
+    });
+    footer.appendChild(close);
+
+    document.body.appendChild(container);
+
+    document.body.style.overflow = 'hidden';
+}
