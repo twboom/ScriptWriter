@@ -7,5 +7,11 @@ session.elements = [];
 
 // Get current line index
 session.getCurrentLineIndex = _ => {
-    return parseInt(document.activeElement.dataset.line);
-}
+    let el = document.activeElement;
+    if (el.classList.contains('line')) {
+        return parseInt(document.activeElement.dataset.line);
+    } else { return session.lastActiveLine.dataset.line; };
+};
+
+// Last active line
+session.lastActiveLine = null;

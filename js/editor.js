@@ -25,6 +25,10 @@ function createLine(content, type, index, doFocus) {
         editLine(line.innerText, index, false);
     });
 
+    line.addEventListener('focus', _ => {
+        session.lastActiveLine = line;
+    });
+
     renderLine(line, index);
 
     if (doFocus) {

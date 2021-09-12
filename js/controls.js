@@ -36,6 +36,12 @@ function initControls() {
         // console.log(document.getElementById(control.id))
         document.getElementById(control.id).addEventListener('click', control.function)
     });
+
+    document.querySelectorAll('.control.ct').forEach(btn => {
+        btn.addEventListener('click', _ => {
+            session.lastActiveLine.focus()
+        })
+    })
 };
 
 initControls();
