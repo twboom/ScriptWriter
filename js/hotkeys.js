@@ -79,7 +79,6 @@ const hotkeys = [
 function initHotkeys(hotkeys) {
     hotkeys.forEach(hotkey => {
         document.addEventListener('keydown', evt => {
-            evt.preventDefault()
             if (
                 evt.key === hotkey.key &&
                 evt.altKey === hotkey.altKey &&
