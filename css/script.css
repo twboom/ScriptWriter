@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+body {
+    font-family: 'Cutive Mono';
+    margin: 0;
+    height: 100vh;
+}
+
+div#editor {
+    width: 100%;
+    height: 100%;
+}
+
+div#text-field {
+    width: 96%;
+    height: fit-content;
+    padding: 2%;
+    background-color: white;
+}
+
+p.line {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+p.line.NAME {
+    margin-top: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p.line.TEXT {
+    width: 40%;
+    margin: 0 auto;
+}
+
+p.line.ACTION {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+p.line.LOCATION {
+    width: 60%;
+    margin: 2% auto;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+p.line.CUT {
+    text-transform: uppercase;
+    text-align: end;
+    width: 60%;
+    margin: 1% auto;
+}
