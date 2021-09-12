@@ -25,6 +25,11 @@ p.line {
     font-weight: bolder;
 }
 
+p.line:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+
 p.line.NAME {
     margin-top: 8px;
     text-align: center;
