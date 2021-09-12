@@ -3,3 +3,4 @@ const session = [];
 
 // All the lines in the document
 session.lines = [];
+session.elements = [];

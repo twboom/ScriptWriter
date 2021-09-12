@@ -1,7 +1,7 @@
 function render() {
     // Establish some constants
     const field = document.getElementById('text-field');
-    const lines = session.lines;
+    const lines = session.elements;
 
     // Clear the field
     field.innerHTML = '';
