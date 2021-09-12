@@ -58,7 +58,7 @@ function download() {
     const encoded = generateFile();
     const link = document.createElement("a");
     link.setAttribute("href", encoded);
-    link.setAttribute("download", "script.sw");
+    link.setAttribute("download", `${script.title}-${script.author}.sw`);
     link.click();
     link.remove();
 }
