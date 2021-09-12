@@ -1,5 +1,5 @@
 // Create a new line
-function createLine(content, type, index) {
+function createLine(content, type, index, doFocus) {
     const line = document.createElement('p');
     line.classList.add('line');
     line.classList.add(type);
@@ -21,16 +21,21 @@ function createLine(content, type, index) {
     };
 
     line.addEventListener('input', _ => {
-        editLine(line.innerText, index);
+        editLine(line.innerText, index, false);
     });
+
+    if (doFocus) {
+        line.focus();
+    }
 
     return line
 };
 
 // Edit an already existing line
-function editLine(newContent, index) {
-    console.log(newContent, index);
-    session.elements[index].innerText = newContent;
+function editLine(newContent, index, doEditHTML) {
+    if (doEditHTML) {
+        session.elements[index].innerText = newContent;
+    }
     session.lines[index].content = newContent;
 };
 
