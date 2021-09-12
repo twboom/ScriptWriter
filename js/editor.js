@@ -10,6 +10,8 @@ function createLine(content, type, number) {
     } else {
         session.lines.splice(number, 0, line);
     };
+    
+    return line
 };
 
 // Edit an already existing line
