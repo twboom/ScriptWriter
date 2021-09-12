@@ -198,4 +198,7 @@ function infoModal() {
     document.body.appendChild(container);
 
     document.body.style.overflow = 'hidden';
+    const scrollOffset = window.pageYOffset;
+
+    container.style.top = scrollOffset + 'px';
 }
