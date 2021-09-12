@@ -1,6 +1,5 @@
 // Create a new line
 function createLine(content, type, index, doFocus) {
-    console.log(arguments)
     const line = document.createElement('p');
     line.classList.add('line');
     line.classList.add(type);
@@ -25,11 +24,11 @@ function createLine(content, type, index, doFocus) {
         editLine(line.innerText, index, false);
     });
 
+    renderLine(line, index);
+
     if (doFocus) {
         line.focus();
     }
-
-    renderLine(line, index);
 
     return line
 };
