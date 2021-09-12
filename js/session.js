@@ -18,7 +18,7 @@ session.lastActiveLine = null;
 
 // Object to store script data
 let script = {};
-script.title = null;
+script.title = 'MyScript';
 script.description = null;
-script.author = null;
+script.author = 'ThisUser';
 script.version = null;
