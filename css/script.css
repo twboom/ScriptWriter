@@ -35,9 +35,12 @@ p.line:empty {
 }
 
 p.line.NAME {
+    margin: 0 auto;
     margin-top: 8px;
     text-align: center;
     text-transform: uppercase;
+    width: 60%;
+    min-width: fit-content;
 }
 
 p.line.TEXT {
