@@ -5,6 +5,7 @@ function createLine(content, type, index, doFocus) {
     line.classList.add(type);
     line.innerText = content;
     line.setAttribute('contenteditable', 'true');
+    line.dataset.line = index;
 
     const obj = {
         content: content,
@@ -30,7 +31,7 @@ function createLine(content, type, index, doFocus) {
         line.focus();
     }
 
-    return line
+    updateIndexes();
 };
 
 // Edit an already existing line
@@ -54,4 +55,12 @@ function deleteLine(index) {
     session.elements[index].remove();
     session.elements.splice(index, 1);
     session.lines.splice(index, 1);
+    updateIndexes();
 };
+
+// Update element indexes
+function updateIndexes() {
+    for (let i = 0; i < session.elements.length; i++) {
+        session.elements[i].dataset.line = i;
+    }
+}
