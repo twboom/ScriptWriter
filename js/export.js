@@ -53,3 +53,12 @@ function generateFile() {
 
     return encoded
 }
+
+function download() {
+    const encoded = generateFile();
+    const link = document.createElement("a");
+    link.setAttribute("href", encoded);
+    link.setAttribute("download", "script.sw");
+    link.click();
+    link.remove();
+}

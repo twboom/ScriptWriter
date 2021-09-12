@@ -54,6 +54,10 @@ function initControls() {
     document.getElementById('more-info').addEventListener('click', _ => {
         infoModal()
     });
+
+    document.getElementById('download').addEventListener('click', _ => {
+        download()
+    });
 };
 
 initControls();
