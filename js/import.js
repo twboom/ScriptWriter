@@ -103,7 +103,7 @@ function readString(file) {
 
 }
 
-function upload() {
+function upload(callback) {
     const file = document.createElement('input')
     file.type = 'file';
     file.accept = '.sw';
@@ -111,5 +111,6 @@ function upload() {
     file.addEventListener('change', _ => {
         file.files[0].text().then(text => readString(text));
         file.remove();
+        callback();
     })
 }

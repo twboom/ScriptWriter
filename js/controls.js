@@ -58,8 +58,8 @@ function initControls() {
     document.getElementById('download').addEventListener('click', _ => {
         download()
     });
-    document.getElementById('upload').addEventListener('click', _ => {
-        upload()
+    document.getElementById('open').addEventListener('click', _ => {
+        open()
     });
 };
 
