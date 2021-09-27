@@ -13,6 +13,27 @@ session.getCurrentLineIndex = _ => {
     } else { return session.lastActiveLine.dataset.line; };
 };
 
+// Reset the session
+session.reset = _ => {
+
+    // Confirmation
+    if (!confirm('Are you sure you want to reset the session?')) { return; };
+
+    session.lines = [];
+    session.elements = [];
+    session.lastActiveLine = null;
+
+    // Remove all lines
+    document.getElementById('text-field').innerHTML = '';
+
+    // Reset all data
+    updateTitle('MyScript', true)
+    updateAuthor('ThisUser', true);
+    updateDescription(null, true);
+    updateVersion(null, true);
+
+};
+
 // Last active line
 session.lastActiveLine = null;
 
