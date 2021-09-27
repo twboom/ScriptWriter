@@ -14,10 +14,12 @@ session.getCurrentLineIndex = _ => {
 };
 
 // Reset the session
-session.reset = _ => {
+session.reset = doConfirm => {
 
     // Confirmation
-    if (!confirm('Are you sure you want to reset the session?')) { return; };
+    if (doConfirm) {
+        if (!confirm('Are you sure you want to reset the session?')) { return; };
+    };
 
     session.lines = [];
     session.elements = [];
