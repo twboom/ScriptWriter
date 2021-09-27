@@ -38,7 +38,7 @@ function generateMeta() {
     return output
 };
 
-function generateFile() {
+function generateString() {
     const meta = generateMeta();
     const text = generateText();
 
@@ -48,6 +48,12 @@ function generateFile() {
     data += "-----"
     data += '\n'
     data += text;
+
+    return data
+}
+
+function generateFile() {
+    const data = generateString();
 
     const encoded = 'data:text/plain;charset=utf-8,' + encodeURIComponent(data);
 

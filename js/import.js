@@ -84,7 +84,7 @@ function readScript(data) {
 
 }
 
-function readFile(file) {
+function readString(file) {
     file = file.split('-----');
     const meta = readMeta(file[0]);
     const lines = readScript(file[1]);
@@ -106,7 +106,7 @@ function upload() {
     file.accept = '.sw';
     file.click();
     file.addEventListener('change', _ => {
-        file.files[0].text().then(text => readFile(text));
+        file.files[0].text().then(text => readString(text));
         file.remove();
     })
 }
