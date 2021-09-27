@@ -34,6 +34,9 @@ session.reset = doConfirm => {
     updateDescription(null, true);
     updateVersion(null, true);
 
+    // Add a new line
+    createLine('', 'ACTION', 'LAST', true)
+
 };
 
 // Last active line
