@@ -104,24 +104,8 @@ function updateVersion(newVersion) {
 }
 
 function infoModal() {
-    // Fullscreen modal container
-    const container = document.createElement('div');
-    container.id = 'modal-container';
-
-    // Modal box
-    const modal = document.createElement('div');
-    modal.id = 'modal';
-    container.appendChild(modal);
-
-    // Modal header
-    const header = document.createElement('h1');
-    header.innerText = 'Script Info';
-    modal.appendChild(header);
-
     // Modal body
     const body = document.createElement('div');
-    body.id = 'modal-body';
-    modal.appendChild(body);
 
     // Inputs
     const title = document.createElement('p');
@@ -180,27 +164,7 @@ function infoModal() {
     });
     version.appendChild(versionInput);
 
-    // Modal footer
-    const footer = document.createElement('div');
-    footer.id = 'modal-footer';
-    modal.appendChild(footer);
-
-    // Close button
-    const close = document.createElement('button');
-    close.id = 'close-button';
-    close.innerText = 'Close';
-    close.addEventListener('click', _ => {
-        document.getElementById('modal-container').remove();
-        document.body.style.overflow = 'auto';
-    });
-    footer.appendChild(close);
-
-    document.body.appendChild(container);
-
-    document.body.style.overflow = 'hidden';
-    const scrollOffset = window.pageYOffset;
-
-    container.style.top = scrollOffset + 'px';
+    new Modal('Script Info', body).show()
 }
 
 window.onbeforeunload = evt => {

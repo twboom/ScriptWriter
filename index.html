@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScriptWriter</title>
+
     <script src="js/session.js"></script>
     <script src="js/editor.js"></script>
     <script src="js/render.js"></script>
     <script src="js/export.js"></script>
     <script src="js/import.js"></script>
     <script src="js/hotkeys.js"></script>
+    <script src="js/modal.js"></script>
     <script defer src="js/controls.js"></script>
     
     <link rel="stylesheet" href="css/script.css">
@@ -38,6 +40,7 @@
         </div>
 
         <div class="control-section" id="up-download">
+            <button class="control" id="open">Open</button>
             <button class="control" id="upload">Upload</button>
             <button class="control" id="download">Download</button>
         </div>
@@ -45,6 +48,10 @@
     <div id="editor">
         <div id="text-field"></div>
     </div>
+
+    <script>
+        createLine('', 'ACTION', 'LAST', true)
+    </script>
 </body>
 </html>
 <!--
