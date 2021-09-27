@@ -14,7 +14,7 @@ session.getCurrentLineIndex = _ => {
 };
 
 // Reset the session
-session.reset = doConfirm => {
+session.reset = (doNewLine, doConfirm) => {
 
     // Confirmation
     if (doConfirm) {
@@ -35,7 +35,7 @@ session.reset = doConfirm => {
     updateVersion(null, true);
 
     // Add a new line
-    createLine('', 'ACTION', 'LAST', true)
+    if (doNewLine) { createLine('', 'ACTION', 'LAST', true) };
 
 };
 

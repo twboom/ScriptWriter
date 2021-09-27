@@ -86,7 +86,7 @@ function readScript(data) {
 
 function readString(file) {
 
-    session.reset(false);
+    session.reset(false, false);
 
     file = file.split('-----');
     const meta = readMeta(file[0]);
